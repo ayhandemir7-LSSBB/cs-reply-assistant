@@ -6,19 +6,11 @@ import json
 from urllib.error import HTTPError, URLError
 from pathlib import Path
 from urllib.request import Request, urlopen
+from dotenv import load_dotenv
 
 # Read the API key and model name from .env (never hard-code them)
 env_file = Path(__file__).resolve().parent.parent / ".env"
-if env_file.is_file():
-    for line in env_file.read_text().splitlines():
-        line = line.strip()
-        if line and not line.startswith("#") and "=" in line:
-            key, value = line.split("=", 1)
-            key = key.strip()
-            if key.startswith("export "):
-                key = key[7:].strip()
-            value = value.strip().strip("\"'")
-            os.environ.setdefault(key, value)
+load_dotenv(env_file)
 
 API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("LLM_MODEL", "gpt-4o-mini")
