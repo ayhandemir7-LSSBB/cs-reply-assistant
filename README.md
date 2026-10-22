@@ -130,12 +130,6 @@ In `product_specs.md`, every heading starts with the product family: `## Gravel:
   Then open a pull request into `main`; Ayhan (repo owner) reviews and merges.
 - **Coding agents:** read `agents.md` first; one Trello card + Must ID per prompt
 
-| Team member | Cards |
-|---|---|
-| Ayhan | 4.1 LLM client · 3.1 Loader · 3.2 Chooser · 4.3 Pipeline · 5.2 Feedback loop + Gradio |
-| Jaime | 1.2 / 1.4 Trello · 2.1 Primary KB · 5.1 RAG decision · 5.3 README + presentation · 5.4 Screenshots |
-| Friedrich | 2.1 / 2.2 KB research · 4.2 Prompt templates · 4.4 Uniqueness comparison · Instagram template |
-
 ---
 
 ## Day 2 additions
