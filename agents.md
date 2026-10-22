@@ -5,6 +5,7 @@ A tool that gives customer service agents draft replies to customer messages, wr
 
 ## Stack & run
 - Python 3.12
+- Libraries: `openai` (LLM API), `python-dotenv` (.env), `mistune` (markdown parsing), `gradio` (Day 2 UI)
 - Main command: `python src/main.py "customer message" email` (channel: `email` or `chat`)
 - Install: `pip install -r requirements.txt`
 - Env vars in `.env` (copy `.env.example`): `OPENAI_API_KEY`, `LLM_MODEL` (default `gpt-4o-mini`). Never commit `.env`.
@@ -44,4 +45,3 @@ A tool that gives customer service agents draft replies to customer messages, wr
 ## How we use agents
 - One Trello card at a time; paste the card title + Must ID into the prompt
 - Point the agent at this file first: "Read agents.md, then do card 3.1 (M1)"
-- Review the agent's changes before committing
