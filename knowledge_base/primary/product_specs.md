@@ -1,4 +1,5 @@
 # Canyon Content Creator: Feature-to-Benefit and Post Angles
+Collected: 2026-10-22
 
 Three bikes, one per category, six key features each. Draft for team review, 22 Oct 2026.
 
@@ -6,7 +7,7 @@ How to read: every feature is turned into the advantage it gives the user, and t
 
 Reliability: specifications come from Canyon pages (UK, 22 Oct 2026) and cited tests. Advantages are general engineering explanations, not Canyon statements. Post ideas are drafts for a human to edit.
 
-## 1. Gravel: Canyon Grizl CF SL 8 1by
+## Gravel: Canyon Grizl CF SL 8 1by
 
 Specs: £1,979 listed (sold out, members-only at capture), 9.5 kg size M, tyres 45 mm fitted and up to 50 mm. Canyon tone: "Drop everything and go explore".
 
@@ -19,7 +20,7 @@ Specs: £1,979 listed (sold out, members-only at capture), 9.5 kg size M, tyres 
 | **1x drivetrain (40T, 10-45T cassette)** | Fewer parts, less maintenance, simple shifting. Wide range for most climbs, less room for heavy loads. | **Main:** simplicity: a clean cockpit and drivetrain.<br>**Side:** the "no front derailleur" look. | **Main:** reducing complexity improves reliability.<br>**Side:** where 1x fits and where it does not (be honest about limits). |
 | **Fork and frame mounts** | Carry bottles, bags or a top tube box for multi-day trips. | **Main:** a fully loaded bike on a bikepacking trip.<br>**Side:** a packing list. | **Main:** modular design: one bike, many uses.<br>**Side:** how product teams plan for real customer use. |
 
-## 2. Mountain: Canyon Spectral CF 8
+## Mountain: Canyon Spectral CF 8
 
 Specs: 140 mm rear and 150 mm fork, 14.96 kg size M, 2025 listing at US$3,249 (UK range £3,799). Canyon tone: "Explosively light carbon frame to charge the climbs".
 
@@ -32,7 +33,7 @@ Specs: 140 mm rear and 150 mm fork, 14.96 kg size M, 2025 listing at US$3,249 (U
 | **Mullet (29"/27.5") or full 29" wheels** | Big wheel rolls over obstacles; small rear wheel adds agility and traction. | **Main:** a corner shot.<br>**Side:** wheel-size debate poll. | **Main:** product choices that follow rider needs.<br>**Side:** trends in MTB design. |
 | **200 mm dropper post (size M)** | Lower the saddle for descents, raise it for climbs in seconds. | **Main:** the dropper in action.<br>**Side:** first-time riders' favourite feature. | **Main:** a small upgrade with a big effect.<br>**Side:** product usability. |
 
-## 3. Road: Canyon Endurace (range-level features)
+## Road: Canyon Endurace (range-level features)
 
 Warning: the exact CF 7 specification could not be confirmed (sources disagree on maximum tyre size: 35 vs 38 mm). Only features Canyon publishes for the range are used. Canyon tone: "Endurance sharpened by racing".
 

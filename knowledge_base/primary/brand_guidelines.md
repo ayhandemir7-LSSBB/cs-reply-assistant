@@ -1,4 +1,5 @@
 # Canyon: Verbal Identity, Tone and Claims
+Collected: 2026-10-22
 
 Draft for team review, 22 Oct 2026. Based on Canyon's UK website pages (Ultimate, Lux, Strive, Spectral, Endurace, Grizl, gravel category, homepage, athletes, brand responsibility) and Canyon's 2023 press release.
 
