@@ -1,4 +1,4 @@
-# Sends the prompt to OpenAI and brings back the draft reply.
+# Sends the prompt to OpenAI and brings back the draft content.
 # The only file in the project that talks to the LLM API (M3).
 
 import os
@@ -41,4 +41,4 @@ def call_llm(user_prompt, system_prompt="You are a helpful assistant.", temperat
 # Hello-world test: python src/llm_integration.py
 if __name__ == "__main__":
     print(f"Model: {MODEL}")
-    print(call_llm("Say 'Hello from the CS Reply Assistant! How can I assist you to support our End Customers Today?' and nothing else."))
+    print(call_llm("Say 'Hello from the Canyon Bikes AI Content Creator!' and nothing else."))
