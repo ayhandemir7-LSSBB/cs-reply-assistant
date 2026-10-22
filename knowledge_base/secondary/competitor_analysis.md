@@ -1,4 +1,5 @@
 # Competitor analysis: why Canyon, in road, gravel and mountain bikes
+Collected: 2026-10-22
 
 ## All | About this file
 - Secondary research layer for the Canyon AI Content Creator (Instagram, LinkedIn, newsletter, email). Compiled 22 Oct 2026.

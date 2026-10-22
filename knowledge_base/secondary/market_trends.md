@@ -1,4 +1,5 @@
 # Market trends: road, gravel and mountain bikes in Europe
+Collected: 2026-10-22
 
 ## All | About this file
 - Secondary research layer (industry context) for the Canyon AI Content Creator: Instagram posts, LinkedIn posts, newsletters and emails about Canyon road, gravel and mountain bikes. Compiled 22 Oct 2026.
