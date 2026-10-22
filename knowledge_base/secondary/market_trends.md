@@ -1,5 +1,5 @@
 # Market trends: road, gravel and mountain bikes in Europe
-Collected: 2026-10-22
+Source: https://onlinemagazine.bike-eu.com/en/edition-june-2025/e-bike-sales-in-europe-see-further-cooling-down · Collected: 2026-10-22
 
 ## All | About this file
 - Secondary research layer (industry context) for the Canyon AI Content Creator: Instagram posts, LinkedIn posts, newsletters and emails about Canyon road, gravel and mountain bikes. Compiled 22 Oct 2026.
@@ -192,16 +192,14 @@ Collected: 2026-10-22
 - Sources: Flow Mountain Bike, "Best trail bikes" (Aug 2026), https://flowmountainbike.com/tests/best-trail-bikes/ ; Pinkbike (16 Jan 2026), link above ; BikeMag, MTB predictions 2026 (31 Dec 2025), https://www.bikemag.com/news/7-mtb-trend-predictions-for-2026
 
 ## MTB | Trend: e-MTB splits into full power and light
-| Motor | Torque | Peak power | Weight | Class |
-|---|---|---|---|---|
-| DJI Avinox M2S | 150 Nm | 1,500 W | 2.59 kg | Full power |
-| DJI Avinox M2 | 125 Nm | 1,100 W | 2.65 kg | Full power |
-| Bosch Performance Line CX Gen 5 | 120 Nm | 750 W | 2.80 kg | Full power |
-| Specialized 3.1 (S-Works) | 111 Nm | 850 W | 3.09 kg | Full power |
-| Shimano EP801 | 85 Nm | 600 W | 2.60 kg | Full power |
-| TQ HPR60 | 60 Nm | 350 W | 1.92 kg | Light |
-| Bosch Performance Line SX | 55 Nm | 400 W | 2.00 kg | Light |
-| TQ HPR50 | 50 Nm | 300 W | 1.85 kg | Light |
+- Motor: DJI Avinox M2S; Torque: 150 Nm; Peak power: 1,500 W; Weight: 2.59 kg; Class: Full power
+- Motor: DJI Avinox M2; Torque: 125 Nm; Peak power: 1,100 W; Weight: 2.65 kg; Class: Full power
+- Motor: Bosch Performance Line CX Gen 5; Torque: 120 Nm; Peak power: 750 W; Weight: 2.80 kg; Class: Full power
+- Motor: Specialized 3.1 (S-Works); Torque: 111 Nm; Peak power: 850 W; Weight: 3.09 kg; Class: Full power
+- Motor: Shimano EP801; Torque: 85 Nm; Peak power: 600 W; Weight: 2.60 kg; Class: Full power
+- Motor: TQ HPR60; Torque: 60 Nm; Peak power: 350 W; Weight: 1.92 kg; Class: Light
+- Motor: Bosch Performance Line SX; Torque: 55 Nm; Peak power: 400 W; Weight: 2.00 kg; Class: Light
+- Motor: TQ HPR50; Torque: 50 Nm; Peak power: 300 W; Weight: 1.85 kg; Class: Light
 - Full-power systems compete on torque; light systems offer a natural, pedal-powered feel with smaller batteries. Motor brands now also compete on efficiency.
 - Sources: Bikometry, e-MTB motors 2026 (Sept 2026), https://bikometry.com/best-emtb-motors-drive-systems-2026/ ; Pinkbike (16 Jan 2026), link above ; BikeMag (31 Dec 2025), link above
 

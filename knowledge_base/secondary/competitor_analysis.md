@@ -1,5 +1,5 @@
 # Competitor analysis: why Canyon, in road, gravel and mountain bikes
-Collected: 2026-10-22
+Source: https://www.tour-magazin.de/en/aero-road-bike/best-road-bike-in-the-world-new-canyon-aeroad-in-the-tour-test/ · Collected: 2026-10-22
 
 ## All | About this file
 - Secondary research layer for the Canyon AI Content Creator (Instagram, LinkedIn, newsletter, email). Compiled 22 Oct 2026.
@@ -50,18 +50,16 @@ Collected: 2026-10-22
 - Sources: Canyon press release (25 Mar 2025), https://media-centre.canyon.com/en-INT/247533-direct-to-consumer-bike-brand-canyon-significantly-expands-its-offline-presence/ ; Canyon US warranty, https://www.canyon.com/en-us/customer-service/warranty-guarantee.html ; Bike-Discount, Radon/Cube guarantee, https://support.bike-discount.de/en/support/solutions/articles/7000057549-guarantee-of-the-brands-radon-and-cube ; bike-test.com, Stumpjumper 15 Expert, https://bike-test.com/en/?p=62035 ; Canyon, The Traka 2026, https://media-centre.canyon.com/en-INT/264626-the-traka-2026-see-you-in-girona/ ; Trustpilot, https://www.trustpilot.com/review/www.canyon.com
 
 ## All | Competitor profiles
-| Competitor | Type | Positioning | Strength to respect |
-|---|---|---|---|
-| Specialized | Premium dealer brand | Innovation, S-Works halo bikes | Most-logged brand on Strava for gravel and MTB; long frame warranty |
-| Trek | Premium dealer brand | Broad range, dealer service | Most-logged road brand on Strava; dealer network |
-| Cervélo, Colnago, BMC, Scott | Premium race brands | Pro-race aero bikes | Prestige; prices of €10,500–15,000 |
-| Santa Cruz, Pivot | Premium MTB brands | Trail and enduro | Top of riders' wish lists (Santa Cruz 9 % in ENDURO survey) |
-| Giant | Global volume brand | Value across segments | Value and availability |
-| CUBE | German dealer brand | Broad value range | Dealer presence; aggressive pricing |
-| ROSE, RADON | German direct sellers | Price for spec | Price; Rose stores in DE, AT, CH, NL |
-| Ribble | UK direct seller | Customisable race bikes | Customisation, price |
-| Decathlon | Mass retail | Low price, stores everywhere | Long return window for members |
-| YT Industries | Direct MTB brand | Enthusiast MTB | Rebuilding after 2025 insolvency |
+- Competitor: Specialized; Type: Premium dealer brand; Positioning: Innovation, S-Works halo bikes; Strength to respect: Most-logged brand on Strava for gravel and MTB; long frame warranty
+- Competitor: Trek; Type: Premium dealer brand; Positioning: Broad range, dealer service; Strength to respect: Most-logged road brand on Strava; dealer network
+- Competitor: Cervélo, Colnago, BMC, Scott; Type: Premium race brands; Positioning: Pro-race aero bikes; Strength to respect: Prestige; prices of €10,500–15,000
+- Competitor: Santa Cruz, Pivot; Type: Premium MTB brands; Positioning: Trail and enduro; Strength to respect: Top of riders' wish lists (Santa Cruz 9 % in ENDURO survey)
+- Competitor: Giant; Type: Global volume brand; Positioning: Value across segments; Strength to respect: Value and availability
+- Competitor: CUBE; Type: German dealer brand; Positioning: Broad value range; Strength to respect: Dealer presence; aggressive pricing
+- Competitor: ROSE, RADON; Type: German direct sellers; Positioning: Price for spec; Strength to respect: Price; Rose stores in DE, AT, CH, NL
+- Competitor: Ribble; Type: UK direct seller; Positioning: Customisable race bikes; Strength to respect: Customisation, price
+- Competitor: Decathlon; Type: Mass retail; Positioning: Low price, stores everywhere; Strength to respect: Long return window for members
+- Competitor: YT Industries; Type: Direct MTB brand; Positioning: Enthusiast MTB; Strength to respect: Rebuilding after 2025 insolvency
 - Sources: BikeRadar and Cycling Weekly guides (links above) ; BIKE, Strava 2025 ranking, https://www.bike-magazin.de/en/magazine/backgrounds/strava-s-2025-annual-report-specialized-is-the-number-1-biker/ ; ENDURO reader survey 2025, link above ; BikeRadar, YT relaunch, https://www.bikeradar.com/news/yt-industries-relaunches-its-us-operations
 
 ## All | Counterpoints: be honest where rivals are strong
@@ -91,18 +89,16 @@ Collected: 2026-10-22
 - Source: Directive 2006/114/EC, https://www.legislation.gov.uk/eudr/2006/114
 
 ## Road | Rivals and how reviewers see them
-| Bike | Positioning | What reviewers say |
-|---|---|---|
-| Specialized S-Works Aethos 2 | Superlight all-rounder | Light and comfortable; very hard to justify on price (about $14,000) |
-| Specialized S-Works Tarmac SL8 | Race all-rounder | Shared TOUR's top grade with the Aeroad; about 200 g lighter |
-| Cervélo S5 | Pro aero race bike | Fast, stiff but not harsh; €13,999 with Dura-Ace; costly upgrades |
-| Colnago Y1Rs / V5Rs | Pro aero (Pogačar) / climbing | Fast feel; €13,200; mid-level wheels for the price |
-| BMC Teammachine R 01 | Aero race | Rigid, efficient; €14,999 |
-| Scott Foil RC / Addict RC | Aero / lightweight | More aero, comfortable; no power meter at €10,499 |
-| Giant Propel / Contend | Aero value / budget alloy | Balances weight and aero; good alloy bikes under £2,000 |
-| Cube Litening Aero C:68X | Value aero | Strong value at €7,299; tyres could be wider |
-| Ribble Ultra SL R | Direct-sale aero | Very fast, well priced, customisable |
-| Orbea Orca Aero | Customisable aero | Comfortable, adjustable; heavier at 8.3 kg |
+- Bike: Specialized S-Works Aethos 2; Positioning: Superlight all-rounder; What reviewers say: Light and comfortable; very hard to justify on price (about $14,000)
+- Bike: Specialized S-Works Tarmac SL8; Positioning: Race all-rounder; What reviewers say: Shared TOUR's top grade with the Aeroad; about 200 g lighter
+- Bike: Cervélo S5; Positioning: Pro aero race bike; What reviewers say: Fast, stiff but not harsh; €13,999 with Dura-Ace; costly upgrades
+- Bike: Colnago Y1Rs / V5Rs; Positioning: Pro aero (Pogačar) / climbing; What reviewers say: Fast feel; €13,200; mid-level wheels for the price
+- Bike: BMC Teammachine R 01; Positioning: Aero race; What reviewers say: Rigid, efficient; €14,999
+- Bike: Scott Foil RC / Addict RC; Positioning: Aero / lightweight; What reviewers say: More aero, comfortable; no power meter at €10,499
+- Bike: Giant Propel / Contend; Positioning: Aero value / budget alloy; What reviewers say: Balances weight and aero; good alloy bikes under £2,000
+- Bike: Cube Litening Aero C:68X; Positioning: Value aero; What reviewers say: Strong value at €7,299; tyres could be wider
+- Bike: Ribble Ultra SL R; Positioning: Direct-sale aero; What reviewers say: Very fast, well priced, customisable
+- Bike: Orbea Orca Aero; Positioning: Customisable aero; What reviewers say: Comfortable, adjustable; heavier at 8.3 kg
 - Sources: BikeRadar aero road (18 Aug 2026), link above ; Cycling Weekly (26 Aug 2026), link above ; TOUR (19 Jul 2024), link above
 
 ## Road | Head-to-head: where Canyon wins
@@ -133,18 +129,16 @@ Collected: 2026-10-22
 - Sources: Cycling Weekly and BikeRadar guides (links above)
 
 ## Gravel | Rivals and how reviewers see them
-| Bike | Positioning | What reviewers say |
-|---|---|---|
-| Specialized Crux | Race gravel | Won both Unbound 200 races in 2026 |
-| Specialized Diverge 4 | Versatile, Future Shock | Confident; stock tyres narrower than the frame allows; £5,249 |
-| Trek Checkpoint Gen 3 | All-round | Sharp, comfortable; tyres only for dry conditions; alloy £1,700 |
-| Cervélo Áspero 5 | Race gravel | Fast; only 45 mm clearance; £10,000 |
-| BMC Kaius 01 | Race gravel | Very fast; firm rear; £9,999 |
-| Giant Revolt Advanced SL | Light all-rounder | Very light; tyre durability concerns; £9,999 |
-| Cannondale Topstone Lefty | Suspension comfort | Class-leading comfort on rough trails; £6,350 |
-| Orbea Terra | Versatile | Good on and off road; poor stock tyres in mud |
-| Ribble Gravel SL | Direct-sale value | Good value, fast on open roads; less capable off-road |
-| Rose Backroad | Direct-sale gravel | In Canyon's wind-tunnel comparison (112.3 W, manufacturer data) |
+- Bike: Specialized Crux; Positioning: Race gravel; What reviewers say: Won both Unbound 200 races in 2026
+- Bike: Specialized Diverge 4; Positioning: Versatile, Future Shock; What reviewers say: Confident; stock tyres narrower than the frame allows; £5,249
+- Bike: Trek Checkpoint Gen 3; Positioning: All-round; What reviewers say: Sharp, comfortable; tyres only for dry conditions; alloy £1,700
+- Bike: Cervélo Áspero 5; Positioning: Race gravel; What reviewers say: Fast; only 45 mm clearance; £10,000
+- Bike: BMC Kaius 01; Positioning: Race gravel; What reviewers say: Very fast; firm rear; £9,999
+- Bike: Giant Revolt Advanced SL; Positioning: Light all-rounder; What reviewers say: Very light; tyre durability concerns; £9,999
+- Bike: Cannondale Topstone Lefty; Positioning: Suspension comfort; What reviewers say: Class-leading comfort on rough trails; £6,350
+- Bike: Orbea Terra; Positioning: Versatile; What reviewers say: Good on and off road; poor stock tyres in mud
+- Bike: Ribble Gravel SL; Positioning: Direct-sale value; What reviewers say: Good value, fast on open roads; less capable off-road
+- Bike: Rose Backroad; Positioning: Direct-sale gravel; What reviewers say: In Canyon's wind-tunnel comparison (112.3 W, manufacturer data)
 - Sources: BikeRadar gravel (14 Oct 2026), link above ; road.cc, Unbound 2026, https://road.cc/offroad/feature/unbound-2026-unwrapped-how-the-worlds-top-gravel-racers-conquered-the-most-prestigious-gravel-race-on-a-brutal-day-of-muddy-drama ; Brújula Bike, Grail Gen 3 (17 Sep 2026), https://en.brujulabike.com/the-canyon-grail-surprises-once-again-in-its-new-version-up-to-57-mm-and-from-eur2499-with-a-carbon-frame-handlebar-and-wheelset/
 
 ## Gravel | Head-to-head: where Canyon wins
@@ -175,17 +169,15 @@ Collected: 2026-10-22
 - Sources: Cycling Industry News, Dutch gravel study (24 Nov 2022), https://cyclingindustry.news/who-are-gravel-bike-riders-dutch-study-finds-out/ ; Škoda We Love Cycling (16 Oct 2026), https://www.welovecycling.com/wide/2026/10/16/gravel-has-officially-grown-up-now-what/ ; BikeRadar gravel, link above
 
 ## MTB | Rivals and how reviewers see them
-| Bike | Positioning | What reviewers say |
-|---|---|---|
-| Santa Cruz Tallboy 6 | Premium trail | Light, efficient, smooth; broadest appeal (Flow's top pick) |
-| Specialized Stumpjumper 15 | Premium trail | Supple, composed, adjustable, GENIE shock; expensive; Expert €7,500 |
-| Trek Fuel EX / Top Fuel | Adjustable trail / short travel | Very adaptable; heavy |
-| Giant Trance X | Adjustable all-rounder | Efficient pedalling, floaty suspension |
-| Pivot Trailcat / Switchblade | Premium trail | Lively; strong technical climber |
-| Scott Genius | Versatile trail | Hidden shock; cable routing a drawback |
-| Merida One-Forty | Value all-rounder | Responsive, good value |
-| YT Industries (Jeffsy, Capra) | Direct enthusiast MTB | Rebuilding trust after 2025 insolvency |
-| RADON | Direct value | Low price, fast delivery |
+- Bike: Santa Cruz Tallboy 6; Positioning: Premium trail; What reviewers say: Light, efficient, smooth; broadest appeal (Flow's top pick)
+- Bike: Specialized Stumpjumper 15; Positioning: Premium trail; What reviewers say: Supple, composed, adjustable, GENIE shock; expensive; Expert €7,500
+- Bike: Trek Fuel EX / Top Fuel; Positioning: Adjustable trail / short travel; What reviewers say: Very adaptable; heavy
+- Bike: Giant Trance X; Positioning: Adjustable all-rounder; What reviewers say: Efficient pedalling, floaty suspension
+- Bike: Pivot Trailcat / Switchblade; Positioning: Premium trail; What reviewers say: Lively; strong technical climber
+- Bike: Scott Genius; Positioning: Versatile trail; What reviewers say: Hidden shock; cable routing a drawback
+- Bike: Merida One-Forty; Positioning: Value all-rounder; What reviewers say: Responsive, good value
+- Bike: YT Industries (Jeffsy, Capra); Positioning: Direct enthusiast MTB; What reviewers say: Rebuilding trust after 2025 insolvency
+- Bike: RADON; Positioning: Direct value; What reviewers say: Low price, fast delivery
 - Sources: Flow Mountain Bike (Aug 2026), link above ; bike-test.com, Stumpjumper 15 Expert, link above ; BikeRadar, YT relaunch, link above
 
 ## MTB | Head-to-head: where Canyon wins
