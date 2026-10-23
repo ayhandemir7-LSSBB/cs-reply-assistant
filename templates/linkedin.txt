@@ -1,0 +1,24 @@
+REQUEST
+Content type: {channel}
+Product family: {product}
+Topic: {topic}
+
+BRAND VOICE
+{brand_voice}
+
+PRODUCT FACTS
+{product_facts}
+
+PAST POSTS (style examples)
+{past_posts}
+
+SECONDARY CONTEXT (background only)
+{secondary_context}
+
+OUTPUT FORMAT
+Write one LinkedIn post of approximately 120-180 words.
+Start with a relevant hook and use short paragraphs.
+Connect supported product facts to the topic and the reader's interests.
+Close with one natural call to action, such as a question inviting discussion.
+Use at most three relevant hashtags, only if they fit the brand voice.
+Return only the post.
