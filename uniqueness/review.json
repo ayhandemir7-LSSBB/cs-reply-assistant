@@ -1,0 +1,41 @@
+{
+  "headline": "Stronger product grounding. Still needs review.",
+  "summary": "Across five requests covering all four channels, the Canyon system provides more selected-product details traceable to the KB. Generic copy includes an unsupported 30% confidence statistic, an out-of-scope road model and unsupported rack/fender claims. However, the system still uses banned phrases, loses a range qualifier and misses email/Instagram length requirements. These examples support a grounding advantage, not publication readiness or universal superiority.",
+  "reviewer": "Codex qualitative review against the repository knowledge base; not blind, independent or a native-language review. No external product verification.",
+  "cases": {
+    "1": [
+      "Grounding advantage: the system names the Grizl CF SL 8 1by and states '9.5 kg (size M)' and 'up to 50 mm'. Both match product_specs.md, section 'Gravel: Canyon Grizl CF SL 8 1by'. The size qualifier is preserved.",
+      "The generic draft stays broad: 'lightweight frames and robust tyres' and a 'smooth and exhilarating experience'. Some general benefits overlap with the KB, so they are not automatically false, but it provides no selected-model specification to verify.",
+      "Both connect to autumn adventures and use direct address. Brand-voice superiority is not established: both use generic promotional language, and the system says 'without limits', an overbroad promise worth editing.",
+      "House style: both fail. Generic contains the banned phrase 'Whether you're'; system contains 'ready to'. Word counts pass at 138 and 120 respectively. The system is more specific, not publication-ready."
+    ],
+    "2": [
+      "Grounding advantage: the system uses Endurace carbon-frame, Sport geometry and VCLS seatpost details from product_specs.md, section 'Road: Canyon Endurace (range-level features)'. It avoids the unverified CF 7 specification.",
+      "The generic email introduces the Ultimate series and claims it combines 'aerodynamics with a cushioned ride'. Ultimate is absent from the selected road product facts. Past brand examples are not evidence for current product specifications; these claims cannot be established from the selected KB.",
+      "System weakness: 'tyre clearance accommodating 32-40 mm' loses the KB qualifier 'by version'. This may imply that every Endurace has the same clearance; a reviewer should restore the qualification.",
+      "Format trade-off: generic is 134 words and passes the length check; the system is 113 words and fails the 120-word minimum. Generic uses banned 'journey' (inside 'journeys') and 'the ultimate'; the latter overlaps a real model name, illustrating possible false positives in substring-based checks. System has no banned-phrase hits.",
+      "Both include Subject, Preview, greeting and the exact team sign-off. Generic adds 'Ride in comfort!' after its main call to action; CTA adherence requires human review. Verdict: better selected-product grounding from the system, but no clean format win."
+    ],
+    "3": [
+      "Strongest evidence: generic opens with 'a 30% increase in their confidence levels'. No rider study or 30% figure exists in the supplied knowledge base. The statistic is unsupported; no external research was performed to determine whether it exists elsewhere.",
+      "The system instead states '140 mm of rear travel and 150 mm at the front' and 'carbon frame weighing just 1,620 g'. Both are present in product_specs.md, section 'Mountain: Canyon Spectral CF 8'. These are KB-backed statements, not independently verified product specifications.",
+      "The system links travel to roots, rocks and drops, and geometry to stability. These rider benefits are traceable to the same KB section, making the copy more useful to review than the generic confidence statistic.",
+      "House-style result: system passes the implemented checks at 120 words. Generic is 121 words but contains banned 'elevate' and 'whether you're'. Both use three hashtags. This check does not prove factual correctness or full template adherence.",
+      "Remaining caution: system phrases such as 'ultimate control' and 'any trail with assurance' are broad marketing claims. Prefer bounded wording before publication. Verdict: clear grounding advantage in this pair."
+    ],
+    "4": [
+      "Grounding advantage: system names the Grizl CF SL 8 1by, gives up to 50 mm clearance, and connects carbon-frame and Gravel Pro geometry details to rider benefits. These appear in product_specs.md, Gravel section.",
+      "Generic claims mounts for racks and fenders and preparation for any incline. The selected KB documents fork/frame mounts for bottles and bags, not confirmed rack/fender compatibility, and explicitly notes drivetrain limitations for heavy loads. These broader claims are unsupported by the selected facts.",
+      "System weakness: it attributes reduced hand/back fatigue to frame vibration damping, while the selected KB explicitly associates those benefits with the VCLS seatpost. It also says without compromising speed or control; this is broader than the documented benefit and needs editing.",
+      "Both have subject, preview, greeting, two titled sections and the required sign-off. Generic has two closing invitations despite the one-CTA instruction. Both contain banned ready to. Lengths 205 and 212 meet the newsletter template range of 200-280 under the existing word counter.",
+      "Production-check limitation: check_quality has no newsletter length bounds. The presentation separately checks the template range. Verdict: system offers more checkable specifications, but both require editorial review."
+    ],
+    "5": [
+      "Grounding advantage: system opens with Spectral CF 8 travel of 140 mm rear and 150 mm fork, matching product_specs.md, Mountain section. Generic begins with promotional cutting-edge language rather than a concrete selected-product fact.",
+      "Both connect to rocky trails. Generic provides no specific model or specification. System connects suspension to grip/control and fatigue, which the selected KB supports, but absorbing every bump overstates the documented benefit.",
+      "Both fail the template length requirement of 80-150 words: generic 65, system 74. Production check_quality nevertheless reports word_count_ok=true because Instagram has no length bounds there; the presentation flags this separately.",
+      "Both fail the banned-phrase check. Generic contains unleash, cutting-edge and whether you're; system contains unleash. Both use two emojis and three hashtags.",
+      "Verdict: system is more specific and easier to trace to the KB, but neither draft meets all publication rules. Do not present this as an overall formatting win."
+    ]
+  }
+}
