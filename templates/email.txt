@@ -1,26 +1,15 @@
 REQUEST
-Content type: {channel}
-Product family: {product}
-Topic: {topic}
-
-BRAND VOICE
-{brand_voice}
-
-PRODUCT FACTS
-{product_facts}
-
-PAST POSTS (style examples)
-{past_posts}
-
-SECONDARY CONTEXT (background only)
-{secondary_context}
+Write a Canyon marketing email about {product}, connected to this topic: {topic}.
+Use only the selected {product} product facts supplied in the system context. Do not mention another product family or any model absent from those facts. Do not add event, athlete, date, or market claims.
+Write entirely in the language named in the system instructions, except for the exact sign-off below.
 
 OUTPUT FORMAT
-Write one marketing email with these labelled sections:
-Subject: a concise subject line, at most 60 characters.
-Preview: one short preview sentence that complements the subject.
-Body: approximately 120-180 words in short paragraphs.
-Connect supported product facts to the topic and the reader's interests.
-End the body with one clear call to action that needs no invented URL or offer.
-Do not invent a recipient's name or a sender's identity.
+Write 120 to 180 words in plain text.
+Output exactly these parts in this order, with no extra labels:
+Subject: followed by a subject of no more than 8 words and no emoji.
+Preview: followed by a preview of no more than 12 words and no emoji.
+A greeting in the requested language.
+2 to 3 short body paragraphs built only on concrete selected product facts. Include 1 or 2 relevant emojis in the body paragraphs, never in a header and never at the start of a line.
+One clear call to action sentence on its own line. Do not add another invitation or sales line.
+The exact sign-off: The Canyon team
 Return only the email.

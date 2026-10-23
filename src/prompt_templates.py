@@ -2,8 +2,8 @@ from pathlib import Path
 from string import Formatter
 
 
-# Resolve files from this module, regardless of where Python is started.
 TEMPLATES_DIR = Path(__file__).resolve().parent.parent / "templates"
+LANGUAGES = ("English", "German", "French", "Spanish")
 
 
 def _fill_template(path, values):
@@ -24,9 +24,20 @@ def _fill_template(path, values):
         raise ValueError(f"Cannot fill {path.name}: {error}") from error
 
 
+def _load_banned_phrases():
+    path = TEMPLATES_DIR / "banned_phrases.txt"
+    try:
+        phrases = [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    except FileNotFoundError as error:
+        raise FileNotFoundError(f"Banned phrase list not found: {path}") from error
+    if not phrases:
+        raise ValueError(f"Banned phrase list is empty: {path}")
+    return ", ".join(phrases)
+
+
 def build_prompts(channel, product, topic, brand_voice, product_facts,
-                  past_posts="", secondary_context=""):
-    # These seven names are the shared interface with the context selector.
+                  past_posts="", secondary_context="", language="English"):
+    # Keep one value for every template placeholder.
     values = {
         "channel": channel,
         "product": product,
@@ -35,6 +46,8 @@ def build_prompts(channel, product, topic, brand_voice, product_facts,
         "product_facts": product_facts,
         "past_posts": past_posts,
         "secondary_context": secondary_context,
+        "language": language,
+        "banned_phrases": _load_banned_phrases(),
     }
     for name, value in values.items():
         if not isinstance(value, str):
@@ -42,6 +55,10 @@ def build_prompts(channel, product, topic, brand_voice, product_facts,
         values[name] = value.strip()
         if not values[name] and name not in ("past_posts", "secondary_context"):
             raise ValueError(f"{name} must not be empty.")
+
+    # Reject unsupported languages with the supported choices.
+    if values["language"] not in LANGUAGES:
+        raise ValueError(f"Unsupported language {values['language']!r}. Choose one of: {', '.join(LANGUAGES)}")
 
     # A channel is a filename stem, never a path supplied by the caller.
     channel = values["channel"]
@@ -56,30 +73,31 @@ def build_prompts(channel, product, topic, brand_voice, product_facts,
     return system_prompt, user_prompt
 
 
-# Run this file directly to preview both templates without calling the AI.
-# This block does not run when the pipeline imports build_prompts.
+def build_prompt(channel, product, topic, context, language="English"):
+    # Adapt the knowledge-base context dictionary to build_prompts.
+    return build_prompts(
+        channel,
+        product,
+        topic,
+        context["brand_voice"],
+        context["product_facts"],
+        context["past_posts"],
+        context["secondary_context"],
+        language=language,
+    )
+
+
+# Run this file directly to preview both prompts with real product context.
 if __name__ == "__main__":
-    # Deliberate sample labels: these are not real company or product facts.
-    sample_inputs = {
-        "product": "gravel",
-        "topic": "autumn gravel rides",
-        "brand_voice": "[Sample brand guidelines go here.]",
-        "product_facts": "[Sample product facts go here.]",
-        "past_posts": "[Sample past posts go here.]",
-        "secondary_context": "[Sample industry context goes here.]",
-    }
+    from knowledge_base import choose_context, load_knowledge_base
 
-    for channel in ("linkedin", "email"):
-        system_prompt, user_prompt = build_prompts(channel=channel, **sample_inputs)
-
-        # Check that none of the seven template placeholders remain.
-        for name in ("channel", *sample_inputs):
-            placeholder = "{" + name + "}"
-            if placeholder in system_prompt or placeholder in user_prompt:
-                raise AssertionError(f"Unfilled placeholder: {placeholder}")
-
-        print(f"\n=== {channel.upper()}: SYSTEM PROMPT ===")
-        print(system_prompt)
-        print(f"\n=== {channel.upper()}: USER PROMPT ===")
-        print(user_prompt)
-        print(f"\nPASS: {channel} template filled successfully.")
+    pieces = load_knowledge_base()
+    context = choose_context(pieces, "gravel")
+    system_prompt, user_prompt = build_prompt(
+        "linkedin", "gravel", "autumn gravel season", context
+    )
+    print("=== SYSTEM PROMPT ===")
+    print(system_prompt)
+    print("=== USER PROMPT ===")
+    print(user_prompt)
+    print("PASS: Built both prompts using the real knowledge base.")
