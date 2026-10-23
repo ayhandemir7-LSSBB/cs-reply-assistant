@@ -5,6 +5,7 @@ Write entirely in the language named in the system instructions, except for the 
 
 OUTPUT FORMAT
 Write 120 to 180 words in plain text.
+Aim for about 150 words, comfortably inside the allowed range. Count all output, including Subject and Preview labels and text, greeting, call to action and sign-off; punctuation and standalone emojis do not count as words. Do not add unsupported facts to reach the target.
 Output exactly these parts in this order, with no extra labels:
 Subject: followed by a subject of no more than 8 words and no emoji.
 Preview: followed by a preview of no more than 12 words and no emoji.

@@ -1,0 +1,29 @@
+{
+  "headline": "Prompt changes alone did not improve compliance.",
+  "summary": "In this single retest, system drafts meeting channel length fell from 3/5 to 1/5. Drafts with banned phrases stayed at 3/5. Product-specific grounding remains useful, but no overall improvement can be established from one stochastic sample per brief.",
+  "reviewer": "Codex review against the local KB; not independent or blind. Original outputs preserved separately.",
+  "cases": {
+    "1": [
+      "System uses documented Grizl 9.5 kg (size M) and up to 50 mm qualifiers correctly.",
+      "Length regressed from 120 to 117 words; the 120-word minimum is missed. Banned ready to persists. The 160-word target was not followed."
+    ],
+    "2": [
+      "System associates comfort with Sport geometry and the VCLS seatpost, consistent with the Road KB. The weight claim preserves starting from 7.52 kg.",
+      "Tyre-clearance qualifier handling is not tested because this draft omits clearance. Do not claim that the earlier by-version failure is resolved.",
+      "Email remains short: 113 to 116 words, still below 120. Experience the perfect blend and Shop now form two closing promotional invitations despite the one-CTA rule."
+    ],
+    "3": [
+      "The system retains documented Spectral suspension figures and connects flip chip/geometry to tunability.",
+      "Length regressed from 120 to 115 words. No banned phrases appear, but no all-checks pass is achieved. Absolute language about even the toughest descents remains worth editing."
+    ],
+    "4": [
+      "System uses up to 50 mm and frame mounts for bottles/bags from the Gravel KB. The prior frame/seatpost fatigue conflation does not recur, but that feature was omitted, so this does not prove the causal rule is reliably followed.",
+      "Newsletter is 202 words, within 200-280 but below the 240-word target. It omits the required two section titles and ends with two invitations. Banned journey and ready to appear.",
+      "Production length checking remains unbounded for newsletters; the separate report check supplies the real range."
+    ],
+    "5": [
+      "System gives documented 140 mm rear/150 mm front suspension. Broad toughest obstacles language still needs review.",
+      "Instagram grows from 74 to 75 words but still fails the 80-word minimum and contains ready to. Production word_count_ok=true is misleading because this channel is unbounded in check_quality."
+    ]
+  }
+}

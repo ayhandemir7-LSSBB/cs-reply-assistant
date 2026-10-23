@@ -10,10 +10,13 @@ Use product claims only from {product_facts}. Use {secondary_context} only for g
 Use facts for the selected product family only. Mention a bike or model only if it appears in the selected product facts.
 Do not add races, dates, athletes, awards, product models, features, prices, weights, or rider results that are absent from the selected product facts.
 If a fact is missing, leave it out. Do not turn a topic suggestion into a factual claim.
+Keep every specification's qualifiers next to the claim: for example, "by version", "size M", "up to", "from", and attribution such as "Canyon claims". Do not turn a model-specific or version-dependent feature into a claim about the whole range.
+Connect a rider benefit to a feature only when the selected product facts explicitly make that connection. Do not transfer a seatpost's comfort benefit to the frame, or infer additional performance benefits from a specification. If the connection is absent, state the feature without adding a benefit.
 
 ANTI-SLOP
 Do not use any of these phrases: {banned_phrases}
 Avoid three adjectives in a row, stock slogans, inflated claims, and rhetorical questions as the opening line.
+Avoid "ultimate" as unsupported promotional praise. A genuine product name such as Ultimate is allowed only when it appears in the selected product facts; preserve its spelling.
 
 FORMATTING
 Use plain text. No markdown headings, bold, italics, em dashes, or bullet lists unless the channel template asks for them.
