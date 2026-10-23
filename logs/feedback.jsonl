@@ -8,3 +8,6 @@
 {"timestamp": "2026-10-23T10:44:35.999218+00:00", "action": "Generate", "channel": "linkedin", "product": "gravel", "language": "English", "topic": "gravel tours in fall", "feedback_text": "", "quality_ok": false, "word_count": 0}
 {"timestamp": "2026-10-23T10:44:36.745105+00:00", "action": "Generate", "channel": "linkedin", "product": "gravel", "language": "English", "topic": "gravel tours in fall", "feedback_text": "", "quality_ok": false, "word_count": 0}
 {"timestamp": "2026-10-23T10:46:09.833826+00:00", "action": "Generate", "channel": "linkedin", "product": "gravel", "language": "English", "topic": "fall season", "feedback_text": "", "quality_ok": false, "word_count": 115}
+{"timestamp": "2026-10-23T13:29:24.463820+00:00", "action": "Generate", "channel": "instagram", "product": "mountain", "language": "English", "topic": "summer", "feedback_text": "", "quality_ok": false, "word_count": 79}
+{"timestamp": "2026-10-23T13:29:29.919472+00:00", "action": "Approve", "channel": "instagram", "product": "mountain", "language": "English", "topic": "summer", "feedback_text": "", "quality_ok": false, "word_count": 79}
+{"timestamp": "2026-10-23T14:07:09.134391+00:00", "action": "Generate", "channel": "linkedin", "product": "gravel", "language": "English", "topic": "dfg", "feedback_text": "", "quality_ok": true, "word_count": 139}
