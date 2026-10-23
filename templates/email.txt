@@ -1,0 +1,26 @@
+REQUEST
+Content type: {channel}
+Product family: {product}
+Topic: {topic}
+
+BRAND VOICE
+{brand_voice}
+
+PRODUCT FACTS
+{product_facts}
+
+PAST POSTS (style examples)
+{past_posts}
+
+SECONDARY CONTEXT (background only)
+{secondary_context}
+
+OUTPUT FORMAT
+Write one marketing email with these labelled sections:
+Subject: a concise subject line, at most 60 characters.
+Preview: one short preview sentence that complements the subject.
+Body: approximately 120-180 words in short paragraphs.
+Connect supported product facts to the topic and the reader's interests.
+End the body with one clear call to action that needs no invented URL or offer.
+Do not invent a recipient's name or a sender's identity.
+Return only the email.
