@@ -109,11 +109,28 @@ CSS_BASE = """
                 color: #1d4ed8 !important; border: 1px solid #bfdbfe !important; }
 .ih-success { border-radius: 12px !important; font-weight: 600 !important; background: #ecfdf5 !important;
               color: #047857 !important; border: 1px solid #6ee7b7 !important; }
-.ih-secondary, .ih-success {
-    height: 52px !important;
-    min-height: 52px !important;
-    box-sizing: border-box !important;
+/* BUTTON LAYOUT START */
+.ih-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
 }
+.ih-secondary, .ih-success {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 64px !important;
+    height: auto !important;
+    padding: 10px 14px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+}
+/* BUTTON LAYOUT END */
 
 /* Quality and status boxes */
 .ih-quality { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px 14px; }
@@ -296,7 +313,7 @@ def build_app():
                 quality_output = gr.Markdown(label='Quality', elem_classes='ih-quality')
                 gr.HTML(section('3 · Improve or approve'))
                 feedback_input = gr.Textbox(label='Feedback', placeholder='How should the draft change?')
-                with gr.Row():
+                with gr.Row(elem_classes='ih-actions'):
                     rewrite_button = gr.Button('Rewrite with feedback', elem_classes='ih-secondary')
                     approve_button = gr.Button('Approve + save', elem_classes='ih-success')
                 download_output = gr.File(label='Download approved post', elem_classes='ih-file')
