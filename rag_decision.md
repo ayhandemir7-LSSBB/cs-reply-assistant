@@ -1,8 +1,5 @@
 # rag_decision.md: Inject or Retrieve?
 
-## Decision
-e (e.g. "which bike is best for bikepacking in the Alps?")
-- The prompt gets too long or too expensive per request
 
 
 # RAG Decision: Rule-Based Selection and Direct Context Injection
