@@ -1,0 +1,13 @@
+REQUEST
+Write an Instagram caption for Canyon about {product}, connected to this topic: {topic}.
+Use only the selected {product} product facts supplied in the system context. Do not mention another product family or any model absent from those facts. Treat the topic as a theme, not as evidence of an event, date, launch, or result.
+Write entirely in the language named in the system instructions, except for product and model names, which keep their original spelling.
+
+OUTPUT FORMAT
+Write 80 to 150 words in plain text.
+The first line must state one concrete fact from the selected product facts. Do not begin with a question.
+Write 1 to 2 short body paragraphs. Include 1 or 2 relevant emojis inside the body text, not at the start of a line.
+After the paragraphs, write exactly one sentence as a call to action.
+Put no more than 3 relevant hashtags on the final line.
+Do not add markdown, headings, bullet lists, or facts that are absent from the selected product facts.
+Return only the caption.
