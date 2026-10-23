@@ -1,0 +1,17 @@
+REQUEST
+Write a Canyon newsletter about {product}, using {topic} as its editorial theme.
+Use only facts from the selected {product} product facts in the system context. Mention another product family or model only if it appears in those selected facts. Treat the topic as a theme, not as evidence of an event, date, launch, or result.
+Write entirely in the language named in the system instructions, except for product and model names, which keep their original spelling, and the exact sign-off below.
+
+OUTPUT FORMAT
+Write 200 to 280 words in plain text.
+Output exactly these parts in this order:
+Subject: followed by a subject of no more than 8 words and no emoji.
+Preview: followed by a preview of no more than 12 words and no emoji.
+A greeting in the requested language.
+An opening paragraph that connects the theme to the selected product facts.
+Two short sections, each with a brief plain-text title and one concise paragraph grounded in selected product facts.
+One clear call to action sentence on its own line.
+The exact sign-off: The Canyon team
+Include 1 or 2 relevant emojis inside the body paragraphs, never in a subject, preview, title, or at the start of a line. Do not add markdown, bullet lists, hashtags, unsupported claims, or extra sections.
+Return only the newsletter.
