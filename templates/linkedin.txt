@@ -1,24 +1,12 @@
 REQUEST
-Content type: {channel}
-Product family: {product}
-Topic: {topic}
-
-BRAND VOICE
-{brand_voice}
-
-PRODUCT FACTS
-{product_facts}
-
-PAST POSTS (style examples)
-{past_posts}
-
-SECONDARY CONTEXT (background only)
-{secondary_context}
+Write a LinkedIn post for Canyon about {product}, connected to this topic: {topic}.
+Use only the selected {product} product facts supplied in the system context. Do not mention another product family or any model absent from those facts. Do not add event, athlete, date, or market claims.
+Write entirely in the language named in the system instructions.
 
 OUTPUT FORMAT
-Write one LinkedIn post of approximately 120-180 words.
-Start with a relevant hook and use short paragraphs.
-Connect supported product facts to the topic and the reader's interests.
-Close with one natural call to action, such as a question inviting discussion.
-Use at most three relevant hashtags, only if they fit the brand voice.
+Write 120 to 200 words in plain text.
+The first line must state one concrete fact or rider result from the selected product facts. Do not begin with a question or "Introducing".
+Write 2 to 3 short body paragraphs. Include 1 or 2 relevant emojis inside the body paragraphs, not at the start of a line and not on the hashtag line.
+After the paragraphs, write exactly one sentence as a call to action. Do not add a second invitation or sales line.
+Put no more than 3 relevant hashtags on the final line.
 Return only the post.
