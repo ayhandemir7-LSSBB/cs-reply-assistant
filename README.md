@@ -1,8 +1,8 @@
 # AI Content Creator
 
-A content tool for Canyon Bicycles' marketing team. A marketer selects a channel, product, topic and language; the app combines Canyon's voice and product knowledge with a prompt template to generate a draft. The marketer reviews, edits, rewrites with feedback, and approves the draft for saving. Replace the knowledge-base files to adapt the tool to another company.
+A content-generation tool for Canyon Bicycles. Marketers choose a channel, product family, topic, and language; the app uses Canyon's knowledge base and prompt templates to create a draft. A person reviews the draft, can request a rewrite, and approves the version saved to `outputs/`.
 
-**Demo client:** Canyon Bicycles · **Channels:** email, instagram, linkedin, newsletter · **Products:** gravel, road, mountain bikes · **Languages:** English, German, French, Spanish
+**Channels:** LinkedIn, email, Instagram, newsletter · **Products:** gravel, road, mountain · **Languages:** English, German, French, Spanish
 
 ---
 
@@ -10,38 +10,65 @@ A content tool for Canyon Bicycles' marketing team. A marketer selects a channel
 
 ```mermaid
 flowchart LR
-    R["Request: channel + product + topic + language"] --> L
-    K1[("knowledge_base/primary: brand voice, product facts, past posts")] --> L
-    K2[("knowledge_base/secondary: market context")] --> L
-    L["1. Load Markdown<br/>src/document_processor.py"] --> C
-    C["2. Choose context<br/>src/knowledge_base.py"] --> P
-    P["3. Build prompts<br/>src/prompt_templates.py + templates/"] --> G
-    G["4. Generate draft<br/>src/llm_integration.py"] --> Q
-    Q["5. Check style and length<br/>src/content_pipeline.py"] --> H
-    H{"Human reviews and edits"} -->|"feedback / rewrite"| P
-    H -->|"approve"| O[("outputs/ approved draft")]
-    UI["Gradio UI<br/>src/app.py"] --> R
+    REQ[/Request<br/>channel · product · topic · language/]
+    KBP[(Primary knowledge base<br/>brand voice · product facts · past posts)]
+    KBS[(Secondary knowledge base<br/>market context)]
+    LOAD[1. Load Markdown<br/>src/document_processor.py]
+    CTX[2. Choose request context<br/>src/knowledge_base.py]
+    TEMPLATE[/3. Build prompt<br/>src/prompt_templates.py · templates/]
+    API([4. Generate draft<br/>OpenAI API · src/llm_integration.py])
+    QC{{5. Quality check<br/>src/content_pipeline.py}}
+    HUMAN{Human review}
+    OUTPUT[/Approved Markdown<br/>outputs/]
+
+    REQ --> LOAD
+    KBP --> LOAD
+    KBS --> LOAD
+    LOAD --> CTX --> TEMPLATE --> API --> QC
+    QC -->|draft + quality summary| HUMAN
+    HUMAN -->|feedback for rewrite| TEMPLATE
+    HUMAN -->|approve| OUTPUT
+
+    classDef request fill:#eaf0f5,stroke:#40576b,color:#17242e
+    classDef knowledge fill:#e9f3e9,stroke:#45664b,color:#17242e
+    classDef code fill:#e9f0fa,stroke:#365777,color:#17242e
+    classDef file fill:#f1ebf8,stroke:#665486,color:#17242e
+    classDef service fill:#e8f3f3,stroke:#36666a,color:#17242e
+    classDef check fill:#fff3d9,stroke:#81651f,color:#17242e
+    classDef decision fill:#fff0dc,stroke:#895a20,color:#17242e
+    classDef output fill:#e7f3e9,stroke:#45664b,color:#17242e
+    class REQ request
+    class KBP,KBS knowledge
+    class LOAD,CTX code
+    class TEMPLATE file
+    class API service
+    class QC check
+    class HUMAN decision
+    class OUTPUT output
+    linkStyle 8 stroke:#895a20,stroke-width:1.5,stroke-dasharray:5 4
 ```
 
-| Step | File | Card | Must |
-|---|---|---|---|
-| 1. Load KB Markdown | `src/document_processor.py` | 3.1 | M1, M2 |
-| 2. Choose request context | `src/knowledge_base.py` | 3.2 | M3 support |
-| 3. Build channel and language prompts | `src/prompt_templates.py`, `templates/` | 4.2 | M4 |
-| 4. Generate a draft | `src/llm_integration.py` | 4.1 | M3 |
-| 5. Review, revise, and save | `src/content_pipeline.py`, `src/main.py` | 4.3 | M5 |
+**Shape and color key:** parallelograms are request and file inputs/outputs; cylinders are knowledge-base sources; rectangles are Python steps; the stadium is the OpenAI API call; the hexagon is the quality check; the diamond is the human decision. Colors distinguish those roles. This is option 6 from the process-map notebook: the quality summary is shown as information for the human reviewer, not as an approval decision.
 
-**Local command checks:** document processor PASS; knowledge base PASS; prompt templates PASS; CLI usage PASS; Gradio app import PASS. LLM calls were skipped in this review.
+| Step | What happens | Code | Card / Must |
+|---|---|---|---|
+| 1 | Load Markdown knowledge | `src/document_processor.py` | 3.1 · M1, M2 |
+| 2 | Choose request context | `src/knowledge_base.py` | 3.2 · M3 support |
+| 3 | Build the channel and language prompt | `src/prompt_templates.py`, `templates/` | 4.2 · M4 |
+| 4 | Generate a draft | `src/llm_integration.py` | 4.1 · M3 |
+| 5 | Check, review, revise, and save | `src/content_pipeline.py`, `src/main.py` | 4.3 · M5 |
+
+The style check reports issues for human review. It does not establish factual accuracy. Feedback requests another draft; approval saves the reviewed draft.
+
+**Recorded local checks:** document processor, knowledge base, prompt templates, CLI usage, and Gradio app import passed. The recorded checks did not include a live LLM request.
 
 ## Uniqueness evidence
 
-[uniqueness/comparison.md](uniqueness/comparison.md) compares five requests across the three product families and four channels. It describes a product-grounding advantage in its examples and records style and length failures; it does not claim publication readiness or universal superiority.
+[uniqueness/comparison.md](uniqueness/comparison.md) compares five paired requests across the three product families and four channels. It reports examples where the project pipeline uses more product-specific, knowledge-base-traceable details, alongside style, length, and qualification failures. This is illustrative evidence, not a publication-readiness result or a claim of universal superiority.
 
-## RAG decision
+## Knowledge-selection approach
 
-Inject selected knowledge into prompts with rule-based selection; no RAG. See [rag_decision.md](rag_decision.md).
-
----
+The current pipeline uses rules to select knowledge-base content and inserts it into the prompt. It does not use an embedding index or vector database. See [rag_decision.md](rag_decision.md) for the decision, implementation details, limits, and conditions for revisiting it.
 
 ## Setup
 
@@ -50,21 +77,21 @@ Inject selected knowledge into prompts with rule-based selection; no RAG. See [r
    ```bash
    pip install -r requirements.txt
    ```
-3. Copy `.env.example` to `.env` in the repository root and add your API key locally. The optional model setting defaults to `gpt-4o-mini`. Never commit `.env`.
+3. Copy `.env.example` to `.env` in the repository root and add `OPENAI_API_KEY`. The optional `LLM_MODEL` setting defaults to `gpt-4o-mini`. Keep `.env` local; do not commit it.
 
-## Run
+## Run the CLI
 
-Run the CLI from the repository root. The usage is `Usage: python src/main.py <channel> <product> "<topic>" [language]`.
+Run from the repository root with a channel, product, topic, and optional language:
 
 ```bash
 python src/main.py linkedin gravel "autumn gravel season" German
 ```
 
-Channels: email, instagram, linkedin, newsletter. Products: gravel, road, mountain. Languages: English, German, French, Spanish. Language is optional and defaults to English. Press Enter to approve and save the draft, or type feedback to request a rewrite.
+The usage is `python src/main.py <channel> <product> "<topic>" [language]`. Supported channels are email, Instagram, LinkedIn, and newsletter. Products are gravel, road, and mountain. Languages are English, German, French, and Spanish; the default is English. Press Enter to approve and save, or enter feedback to request a rewrite.
 
 ## Run the Gradio app locally
 
-From the repository root:
+From the repository root, run:
 
 ```bash
 python src/app.py
@@ -74,38 +101,49 @@ Open [http://localhost:7860](http://localhost:7860). The interface supports draf
 
 ## Live app on Render
 
-Live app: The Render URL was not supplied in the review answers.
+A Render deployment URL and deployment status are not recorded in this repository. Add the confirmed URL here if the app is deployed.
 
-## Repo map
+## Repository map
+
+Must IDs refer to requirements in [project_structure.md](project_structure.md), section 4.
 
 ```text
 src/
-├── document_processor.py   # Load and split Markdown knowledge-base files
-├── knowledge_base.py       # Select brand, product, past-post, and secondary context
-├── prompt_templates.py     # Fill channel and language prompt templates
-├── llm_integration.py      # OpenAI API call
-├── content_pipeline.py     # Generate, check, review, and save drafts
-├── main.py                 # Terminal entry point
-└── app.py                  # Gradio interface
+├── app.py                         # Gradio app
+├── content_pipeline.py            # M5 — end-to-end pipeline
+├── document_processor.py          # M1, M2 — ingest KB Markdown
+├── knowledge_base.py              # M3 support — select context
+├── llm_integration.py             # M3 — call LLM with KB context
+├── main.py                        # M5 — CLI entry point
+└── prompt_templates.py            # M4 — channel templates and languages
 knowledge_base/
-│   ├── `knowledge_base/primary/brand_guidelines.md`
-│   ├── `knowledge_base/primary/past_content/post_gravel_grail_gen3.md`
-│   ├── `knowledge_base/primary/past_content/post_mountain_spectral_cf.md`
-│   ├── `knowledge_base/primary/past_content/post_road_ultimate_gen5.md`
-│   ├── `knowledge_base/primary/product_specs.md`
-│   ├── `knowledge_base/secondary/competitor_analysis.md`
-│   ├── `knowledge_base/secondary/market_trends.md`
-templates/                  # `banned_phrases.txt`, `email.txt`, `instagram.txt`, `linkedin.txt`, `newsletter.txt`, `system.txt`
-outputs/                    # Approved draft files
-logs/feedback.jsonl         # Created by the Gradio app as interactions are logged
-uniqueness/comparison.md    # Comparison report
+├── primary/                       # M1 — primary knowledge base
+│   ├── brand_guidelines.md
+│   ├── past_content/
+│   │   ├── post_gravel_grail_gen3.md
+│   │   ├── post_mountain_spectral_cf.md
+│   │   └── post_road_ultimate_gen5.md
+│   └── product_specs.md
+└── secondary/                     # M2 — secondary knowledge base
+    ├── competitor_analysis.md
+    └── market_trends.md
+templates/                         # M4 — prompt templates
+├── banned_phrases.txt
+├── email.txt
+├── instagram.txt
+├── linkedin.txt
+├── newsletter.txt
+└── system.txt
+outputs/                           # M5 — approved drafts
+logs/feedback.jsonl                # Feedback log
+uniqueness/comparison.md           # M6 — comparison evidence
+rag_decision.md                    # M7 — retrieval decision
+project_structure.md               # M8 — project structure
+agents.md                          # M8 — coding-agent guidance
 requirements.txt
-agents.md
-project_structure.md
-rag_decision.md
+.env.example
 ```
-
-### Knowledge base format
+## Knowledge-base format
 
 Each knowledge-base Markdown file starts with a title, source and collection date, then topic sections with factual bullets:
 
@@ -118,34 +156,32 @@ Source: <url> · Collected: YYYY-MM-DD
 - Fact
 ```
 
-In `product_specs.md`, each `##` heading starts with its family, such as `## Gravel: ...`, `## Road: ...`, or `## Mountain: ...`.
-
----
+In `product_specs.md`, each `##` heading starts with its product family, such as `## Gravel: ...`, `## Road: ...`, or `## Mountain: ...`.
 
 ## Quality check
 
-The shared `templates/banned_phrases.txt` list is checked with em dashes, Markdown heading/bold markers, emoji count (maximum 2), hashtag count (maximum 3), and word count. LinkedIn drafts are checked against 120–200 words and email drafts against 120–180 words. Other channels have no word-count range in the current checker. A failed check is reported for human review; a passing style check does not establish factual accuracy.
+The shared `templates/banned_phrases.txt` list is checked along with em dashes, Markdown heading/bold markers, emoji count (maximum 2), hashtag count (maximum 3), and word count. LinkedIn drafts are checked against 120–200 words and email drafts against 120–180 words. Other channels have no word-count range in the current checker. A failed check is reported for human review; a passing check does not establish factual accuracy.
 
 ## Feedback log
 
-The Gradio app records Generate, Rewrite, and Approve actions in `logs/feedback.jsonl` as JSON Lines, including timestamps, request details, feedback text, and quality summary. The log is created on the first interaction.
+The Gradio app appends Generate, Rewrite, and Approve actions to `logs/feedback.jsonl` as JSON Lines. Each record includes a UTC timestamp, action, channel, product, language, topic, feedback text, `quality_ok`, and word count. The log file is created on the first interaction.
 
 ## How we work as a team
 
-- **Plan:** [project_structure.md](project_structure.md) defines the project, Musts, work breakdown, and risks.
-- **Board:** Trello; cards use WBS numbers and Must IDs.
-- **Git:** work on a named branch, pull from `main`, push, and open a pull request into `main` for review and merge.
-- **Coding agents:** read [agents.md](agents.md) first; use one Trello card and Must ID per prompt.
+- **Plan:** [project_structure.md](project_structure.md) describes the project, requirements, work breakdown, and risks.
+- **Board:** Trello cards use WBS numbers and Must IDs.
+- **Git:** work on a named branch, pull from `main`, push, then open a pull request into `main` for review and merge.
+- **Coding agents:** read [agents.md](agents.md) first and work on one Trello card and Must ID per prompt.
 
-## Team and cards
+## Contributors and project cards
 
-| Team member | Branch | Role |
-|---|---|---|
-| Ayhan | `ayhan` | Role not supplied |
-| Jaime | `jaime` | Role not supplied |
-| Friedrich | `friedrich` | Role not supplied |
+| Contributor | Branch |
+|---|---|
+| Ayhan | `ayhan` |
+| Jaime | `jaime` |
+| Friedrich | `friedrich` |
 
-Cards in the current work breakdown:
+The project work breakdown includes these cards:
 
 | Card | Work |
 |---|---|
@@ -155,13 +191,12 @@ Cards in the current work breakdown:
 | 5.4 | Day 1 / Day 2 board screenshots |
 | 5.5 | Render deployment |
 
-## Feedback and demo prep
+## Demo evidence
 
-- Feedback log: `logs/feedback.jsonl` (created by the Gradio app).
-- Screenshots:
-- Screenshot filenames were not supplied in the review answers.
-- Demo plan: Demo plan was not supplied in the review answers.
+- Day 1 board screenshot: [docs/screenshot day1.png](docs/screenshot%20day1.png)
+- Day 2 board screenshot: [docs/Screenshot day2.png](docs/Screenshot%20day2.png)
+- A demo plan is not included in the repository.
 
-## Day 2 additions
+## Implemented Day 2 features
 
-The repository includes feedback and improvement, Instagram and newsletter templates, four languages, a quality check, and a Gradio app. Local command-check results are shown above; deployment details depend on the Render URL supplied for this review.
+The app includes feedback and improvement, Instagram and newsletter templates, four output languages, a quality check, and a Gradio interface. See the sections above for how to run and review generated drafts.
