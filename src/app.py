@@ -8,6 +8,7 @@ import gradio as gr
 from content_pipeline import check_quality, generate_draft, save_post
 from knowledge_base import PRODUCTS
 from prompt_templates import LANGUAGES
+from loading_animation import PRODUCT_JS, loading_css  # look only: loading animation
 
 # ---- UI style (look only, no logic) ----
 # Keep the existing app paths and channel discovery intact.
@@ -159,7 +160,7 @@ CHANNEL_OPTION_CSS = "\n".join(
 """
     for position, channel in enumerate(CHANNELS, start=1)
 )
-CSS = CSS_BASE + CHANNEL_OPTION_CSS
+CSS = CSS_BASE + CHANNEL_OPTION_CSS + loading_css(PRODUCTS[0])
 
 # Lambdas keep the top-level function comparison limited to existing app functions.
 header_html = lambda channels, languages: (
@@ -309,10 +310,10 @@ def build_app():
                 generate_button = gr.Button('Generate', variant='primary', elem_classes='ih-primary')
             with gr.Column(scale=6, elem_classes='ih-card'):
                 gr.HTML(section('2 · Draft'))
-                draft_output = gr.Textbox(label='Draft', lines=14, interactive=True)
+                draft_output = gr.Textbox(label='Draft', lines=14, interactive=True, elem_id='draft-box')
                 quality_output = gr.Markdown(label='Quality', elem_classes='ih-quality')
                 gr.HTML(section('3 · Improve or approve'))
-                feedback_input = gr.Textbox(label='Feedback', placeholder='How should the draft change?')
+                feedback_input = gr.Textbox(label='Feedback', placeholder='How should the draft change?', elem_id='feedback-box')
                 with gr.Row(elem_classes='ih-actions'):
                     rewrite_button = gr.Button('Rewrite with feedback', elem_classes='ih-secondary')
                     approve_button = gr.Button('Approve + save', elem_classes='ih-success')
@@ -333,6 +334,9 @@ def build_app():
             inputs=[draft_output, channel_input, product_input, language_input, topic_input],
             outputs=[download_output, quality_output, status_output],
         )
+        # Look only: tell the page which product is selected (runs in the browser, never calls Python)
+        product_input.change(fn=None, inputs=product_input, js=PRODUCT_JS)
+        app.load(fn=None, inputs=product_input, js=PRODUCT_JS)
     return app
 
 
