@@ -48,7 +48,7 @@ flowchart LR
     linkStyle 8 stroke:#895a20,stroke-width:1.5,stroke-dasharray:5 4
 ```
 
-**Shape and color key:** parallelograms are request and file inputs/outputs; cylinders are knowledge-base sources; rectangles are Python steps; the stadium is the OpenAI API call; the hexagon is the quality check; the diamond is the human decision. Colors distinguish those roles. This is option 6 from the process-map notebook: the quality summary is shown as information for the human reviewer, not as an approval decision.
+**Shape and color key:** parallelograms are request and file inputs/outputs; cylinders are knowledge-base sources; rectangles are Python steps; the stadium is the OpenAI API call; the hexagon is the quality check; the diamond is the human decision. Colors distinguish those roles. The quality summary is shown as information for the human reviewer, not as an approval decision.
 
 | Step | What happens | Code | Card / Must |
 |---|---|---|---|
@@ -101,7 +101,7 @@ Open [http://localhost:7860](http://localhost:7860). The interface supports draf
 
 ## Live app on Render
 
-A Render deployment URL and deployment status are not recorded in this repository. Add the confirmed URL here if the app is deployed.
+A Render deployment URL and deployment status are not recorded in this repository. URL: https://ai-multichannel-multilanguage-content.onrender.com/
 
 ## Repository map
 
@@ -195,7 +195,7 @@ The project work breakdown includes these cards:
 
 - Day 1 board screenshot: [docs/screenshot day1.png](docs/screenshot%20day1.png)
 - Day 2 board screenshot: [docs/Screenshot day2.png](docs/Screenshot%20day2.png)
-- A demo plan is not included in the repository.
+- A demo plan is not included in the repository. https://ai-multichannel-multilanguage-content.onrender.com/
 
 ## Implemented Day 2 features
 
